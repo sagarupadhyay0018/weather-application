@@ -71,7 +71,7 @@ async function weathercityfunction(city) {
         weatherIcon.innerHTML = `
         <img src="https://openweathermap.org/img/wn/${weather[0].icon}@2x.png">
         `;
-        weatherTemperature.textContent = `${Math.floor(main.temp)}`
+        weatherTemperature.textContent = `${Math.floor(main.temp)}°C`
 
 
         weatherMin.textContent =
