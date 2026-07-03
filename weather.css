@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .bgcontainer {
     width: 100%;
     min-height: 100vh;
@@ -23,334 +22,225 @@
     padding: 20px;
 }
 
-
-
-
-
 .container {
-
     width: min(90vw, 400px);
     min-height: 500px;
-    height: auto;
-
     background-color: white;
     border-radius: 10px;
 
     display: flex;
     align-items: center;
-    justify-content: start;
     flex-direction: column;
 
     padding: 20px;
 }
 
-
-
+/* ===========================
+   SEARCH BAR
+=========================== */
 
 .weatherheader {
-
-    width: 200px;
-    height: 35px;
+    width: 100%;
+    max-width: 320px;
+    height: 45px;
 
     background-color: black;
-    border-radius: 20px;
+    border-radius: 30px;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 10px;
 
-    padding: 0 10px;
-
-
-    input {
-
-        width: 150px;
-        background-color: black;
-
-        border: none;
-        outline: none;
-        color: white;
-    }
-
-
-    input::placeholder {
-
-        color: white;
-    }
-
-
-
-    .fa-solid {
-
-        color: white;
-        background-color: black;
-
-        font-size: 16px;
-    }
-
+    padding: 0 15px;
 }
 
+.weatherheader input {
+    flex: 1;
+    min-width: 0;
 
+    background: transparent;
+    border: none;
+    outline: none;
 
+    color: white;
+    font-size: 16px;
+}
 
+.weatherheader input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.weatherheader .fa-solid {
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
 
 .weatherbody {
-
     width: 90%;
     max-width: 300px;
-
     min-height: 250px;
 
     display: flex;
     align-items: center;
-    justify-content: start;
-
     flex-direction: column;
-
 }
-
-
-
 
 .weathercity {
-
     text-align: center;
-
-    font-size: clamp(18px, 5vw, 25px);
-
-    color: black;
-
+    font-size: clamp(20px, 5vw, 26px);
 }
-
-
-
 
 .weatherdateandtime {
-
     text-align: center;
-
     font-size: 15px;
-
-    color: black;
-
 }
-
-
-
 
 .weatherdate {
-
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
-
-
-
-
 
 .weathericon {
-
     margin: 15px 0;
-
-
-    .fa-cloud {
-
-        font-size: clamp(35px, 8vw, 45px);
-    }
-
 }
 
-
-
+.weathericon .fa-cloud {
+    font-size: clamp(40px, 8vw, 50px);
+}
 
 .weathertemperature {
-
-    text-align: center;
-
-    font-size: 23px;
-
+    font-size: 24px;
     margin: 5px 0;
-
 }
-
-
-
-
 
 .weatherminmax {
-
     display: flex;
-
-    align-items: center;
     justify-content: space-between;
-
-    width: 160px;
-
+    width: 170px;
     margin-top: 10px;
-
 }
-
-
-
 
 .weathermin,
 .weathermax {
-
     font-size: 14px;
-
-    white-space: nowrap;
-
 }
-
-
-
-
 
 .weatherforecast {
-
     margin-top: 10px;
-
 }
-
-
-
-
 
 .weatherotherinfo {
-
-
-    width: 90%;
+    width: 100%;
     max-width: 350px;
 
-    height: auto;
-
-
     display: grid;
-
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 10px;
-
-
-    margin-top: 0;
-
+    margin-top: 10px;
 }
-
-
-
-
 
 .weathercard {
-
     width: 100%;
-
-    min-height: 60px;
-
+    min-height: 70px;
 
     display: flex;
+    align-items: center;
 
-    align-items: start;
-
-    justify-content: start;
-
-
-    border-radius: 5px;
-
+    border-radius: 8px;
 
     box-shadow:
-    rgba(0,0,0,0.1) 0px 0px 5px,
-    rgba(0,0,0,0.1) 0px 0px 1px;
-
-
-
-
-    .fa-solid {
-
-        font-size: 15px;
-
-        margin-top: 20px;
-
-        margin-left: 15px;
-    }
-
-
-
-    p {
-
-        font-size: 14px;
-
-        margin-top: 5px;
-
-        margin-left: 8px;
-    }
-
+        rgba(0, 0, 0, 0.1) 0px 0px 5px,
+        rgba(0, 0, 0, 0.08) 0px 0px 2px;
 }
 
+.weathercard .fa-solid {
+    font-size: 18px;
+    margin-left: 15px;
+}
 
+.weathercard p {
+    font-size: 14px;
+    margin-left: 10px;
+}
 
+/* ===========================
+   TABLET
+=========================== */
 
-
-/* MOBILE */
-
-@media(max-width:450px){
-
-
-    .bgcontainer {
-
-        padding: 10px;
-
-    }
-
-
+@media (max-width:768px) {
 
     .container {
-
-        width: 95vw;
-
-        min-height: 95vh;
-
-        padding: 15px;
-
+        width: 95%;
     }
-
-
 
     .weatherheader {
-
-        width: 180px;
-
-        margin-top: 10px;
-
+        max-width: 100%;
     }
-
-
-
 
     .weatherotherinfo {
+        max-width: 100%;
+    }
+}
 
-        grid-template-columns: 1fr;
+/* ===========================
+   MOBILE
+=========================== */
 
+@media (max-width:450px) {
+
+    .bgcontainer {
+        padding: 10px;
     }
 
-
-
-
-    .weathercard {
-
-        min-height: 70px;
-
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 20px;
     }
 
+    .weatherheader {
+        width: 100%;
+        max-width: none;
+        height: 50px;
+        padding: 0 18px;
+    }
 
+    .weatherheader input {
+        font-size: 16px;
+    }
+
+    .weathercity {
+        font-size: 28px;
+    }
+
+    .weathertemperature {
+        font-size: 28px;
+    }
 
     .weatherminmax {
-
-        width: 140px;
-
+        width: 150px;
     }
 
+    .weatherotherinfo {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .weathercard {
+        min-height: 75px;
+    }
+
+    .weathercard .fa-solid {
+        font-size: 20px;
+    }
+
+    .weathercard p {
+        font-size: 15px;
+    }
 }
