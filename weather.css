@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.bgcontainer {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* background-image: url(https://images.unsplash.com/photo-1547314283-befb6cc5cf29?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmV3JTIwemVhbGFuZHxlbnwwfHwwfHx8MA%3D%3D); */
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding: 20px;
+}
+
+
+
+
+
+.container {
+
+    width: min(90vw, 400px);
+    min-height: 500px;
+    height: auto;
+
+    background-color: white;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+    padding: 20px;
+}
+
+
+
+
+.weatherheader {
+
+    width: 200px;
+    height: 35px;
+
+    background-color: black;
+    border-radius: 20px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px;
+
+
+    input {
+
+        width: 150px;
+        background-color: black;
+
+        border: none;
+        outline: none;
+        color: white;
+    }
+
+
+    input::placeholder {
+
+        color: white;
+    }
+
+
+
+    .fa-solid {
+
+        color: white;
+        background-color: black;
+
+        font-size: 16px;
+    }
+
+}
+
+
+
+
+
+.weatherbody {
+
+    width: 90%;
+    max-width: 300px;
+
+    min-height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    flex-direction: column;
+
+}
+
+
+
+
+.weathercity {
+
+    text-align: center;
+
+    font-size: clamp(18px, 5vw, 25px);
+
+    color: black;
+
+}
+
+
+
+
+.weatherdateandtime {
+
+    text-align: center;
+
+    font-size: 15px;
+
+    color: black;
+
+}
+
+
+
+
+.weatherdate {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.weathericon {
+
+    margin: 15px 0;
+
+
+    .fa-cloud {
+
+        font-size: clamp(35px, 8vw, 45px);
+    }
+
+}
+
+
+
+
+.weathertemperature {
+
+    text-align: center;
+
+    font-size: 23px;
+
+    margin: 5px 0;
+
+}
+
+
+
+
+
+.weatherminmax {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 160px;
+
+    margin-top: 10px;
+
+}
+
+
+
+
+.weathermin,
+.weathermax {
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+}
+
+
+
+
+
+.weatherforecast {
+
+    margin-top: 10px;
+
+}
+
+
+
+
+
+.weatherotherinfo {
+
+
+    width: 90%;
+    max-width: 350px;
+
+    height: auto;
+
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 10px;
+
+
+    margin-top: 0;
+
+}
+
+
+
+
+
+.weathercard {
+
+    width: 100%;
+
+    min-height: 60px;
+
+
+    display: flex;
+
+    align-items: start;
+
+    justify-content: start;
+
+
+    border-radius: 5px;
+
+
+    box-shadow:
+    rgba(0,0,0,0.1) 0px 0px 5px,
+    rgba(0,0,0,0.1) 0px 0px 1px;
+
+
+
+
+    .fa-solid {
+
+        font-size: 15px;
+
+        margin-top: 20px;
+
+        margin-left: 15px;
+    }
+
+
+
+    p {
+
+        font-size: 14px;
+
+        margin-top: 5px;
+
+        margin-left: 8px;
+    }
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:450px){
+
+
+    .bgcontainer {
+
+        padding: 10px;
+
+    }
+
+
+
+    .container {
+
+        width: 95vw;
+
+        min-height: 95vh;
+
+        padding: 15px;
+
+    }
+
+
+
+    .weatherheader {
+
+        width: 180px;
+
+        margin-top: 10px;
+
+    }
+
+
+
+
+    .weatherotherinfo {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+
+    .weathercard {
+
+        min-height: 70px;
+
+    }
+
+
+
+    .weatherminmax {
+
+        width: 140px;
+
+    }
+
+}
